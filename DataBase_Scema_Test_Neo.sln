@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase_Scema_Test_Neo", "DataBase_Scema_Test_Neo\DataBase_Scema_Test_Neo.csproj", "{BB1CA71E-5C12-4161-A140-2A51F31DDFAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB1CA71E-5C12-4161-A140-2A51F31DDFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1CA71E-5C12-4161-A140-2A51F31DDFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1CA71E-5C12-4161-A140-2A51F31DDFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1CA71E-5C12-4161-A140-2A51F31DDFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B3C47B8-29C4-41D7-8048-0B87D3CDC662}
+	EndGlobalSection
+EndGlobal
