@@ -144,6 +144,14 @@
     <Compile Include="Migrations\202301071646303_initial8.designer.cs">
       <DependentUpon>202301071646303_initial8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301081113157_topics_questions.cs" />
+    <Compile Include="Migrations\202301081113157_topics_questions.designer.cs">
+      <DependentUpon>202301081113157_topics_questions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301081118456_topics_questions_b.cs" />
+    <Compile Include="Migrations\202301081118456_topics_questions_b.designer.cs">
+      <DependentUpon>202301081118456_topics_questions_b.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\Candidate.cs" />
@@ -216,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301071646303_initial8.resx">
       <DependentUpon>202301071646303_initial8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301081113157_topics_questions.resx">
+      <DependentUpon>202301081113157_topics_questions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301081118456_topics_questions_b.resx">
+      <DependentUpon>202301081118456_topics_questions_b.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

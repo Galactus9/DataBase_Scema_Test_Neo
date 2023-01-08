@@ -18,7 +18,6 @@ namespace DataBase_Scema_Test_Neo.Data
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<Examination> Examinations { get; set; }
         public DbSet<SelectedAnswers> SelectedAnswers { get; set; }
-
-
     }
 }
+                                                                //Candidate Cascade on Delete
