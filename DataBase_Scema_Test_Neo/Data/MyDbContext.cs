@@ -19,5 +19,6 @@ namespace DataBase_Scema_Test_Neo.Data
         public DbSet<Examination> Examinations { get; set; }
         public DbSet<SelectedAnswers> SelectedAnswers { get; set; }
     }
+    //test
 }
                                                                 //Candidate Cascade on Delete
