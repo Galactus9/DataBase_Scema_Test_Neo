@@ -12,7 +12,7 @@ namespace DataBase_Scema_Test_Neo.Models
         public Certificate Certificate { get; set; }
         public ICollection<Question> ExamQuestions { get; set; }
 
-        //Result = CorectAns/MaxScore = x%
+        //Result = CorectAns/MaxScore * 100= x%
 
     }
 }

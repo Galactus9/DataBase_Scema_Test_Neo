@@ -11,7 +11,7 @@ namespace DataBase_Scema_Test_Neo.Models
         public Candidate Candidate { get; set; }
         public Certificate Certificate { get; set; }
         public Question ExamQuestion { get; set; }
-        public string SelectedAnswer { get; set; }
+        public Object SelectedAnswer { get; set; }
         //public Examination Examination { get; set; }
 
 

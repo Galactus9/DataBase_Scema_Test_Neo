@@ -10,8 +10,9 @@ namespace DataBase_Scema_Test_Neo.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        
         public virtual ICollection<Topic> Topics { get; set; }
-        private int PossibleMarks { get; set; } // = Topics.Question.Count // Topic.SubjectWeight.Sum()
+        private int PossibleMarks { get; set; }  // Topic.SubjectWeight.Sum()
 
     }
 }

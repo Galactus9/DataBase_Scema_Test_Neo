@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CandidateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\MyDbContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -143,6 +144,10 @@
     <Compile Include="Migrations\202301071646303_initial8.cs" />
     <Compile Include="Migrations\202301071646303_initial8.designer.cs">
       <DependentUpon>202301071646303_initial8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301081303031_fddgd.cs" />
+    <Compile Include="Migrations\202301081303031_fddgd.designer.cs">
+      <DependentUpon>202301081303031_fddgd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -190,6 +195,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Candidate\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301071646303_initial8.resx">
       <DependentUpon>202301071646303_initial8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301081303031_fddgd.resx">
+      <DependentUpon>202301081303031_fddgd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
