@@ -132,33 +132,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202301071614539_initial6.cs" />
-    <Compile Include="Migrations\202301071614539_initial6.designer.cs">
-      <DependentUpon>202301071614539_initial6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202301071644445_initial7.cs" />
-    <Compile Include="Migrations\202301071644445_initial7.designer.cs">
-      <DependentUpon>202301071644445_initial7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202301071646303_initial8.cs" />
-    <Compile Include="Migrations\202301071646303_initial8.designer.cs">
-      <DependentUpon>202301071646303_initial8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202301081113157_topics_questions.cs" />
-    <Compile Include="Migrations\202301081113157_topics_questions.designer.cs">
-      <DependentUpon>202301081113157_topics_questions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202301081118456_topics_questions_b.cs" />
-    <Compile Include="Migrations\202301081118456_topics_questions_b.designer.cs">
-      <DependentUpon>202301081118456_topics_questions_b.cs</DependentUpon>
+    <Compile Include="Migrations\202301110921591_Final.cs" />
+    <Compile Include="Migrations\202301110921591_Final.designer.cs">
+      <DependentUpon>202301110921591_Final.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\Candidate.cs" />
+    <Compile Include="Models\ExamQuestions.cs" />
     <Compile Include="Models\Examination.cs" />
     <Compile Include="Models\PossibleAnswers.cs" />
-    <Compile Include="Models\Question.cs" />
-    <Compile Include="Models\SelectedAnswers.cs" />
+    <Compile Include="Models\PullOfQuestionPerTopic.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -216,20 +200,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301071614539_initial6.resx">
-      <DependentUpon>202301071614539_initial6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301071644445_initial7.resx">
-      <DependentUpon>202301071644445_initial7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301071646303_initial8.resx">
-      <DependentUpon>202301071646303_initial8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301081113157_topics_questions.resx">
-      <DependentUpon>202301081113157_topics_questions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202301081118456_topics_questions_b.resx">
-      <DependentUpon>202301081118456_topics_questions_b.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301110921591_Final.resx">
+      <DependentUpon>202301110921591_Final.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

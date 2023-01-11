@@ -7,13 +7,13 @@ namespace DataBase_Scema_Test_Neo.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class initial8 : IMigrationMetadata
+    public sealed partial class Final : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial8));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Final));
         
         string IMigrationMetadata.Id
         {
-            get { return "202301071646303_initial8"; }
+            get { return "202301110921591_Final"; }
         }
         
         string IMigrationMetadata.Source

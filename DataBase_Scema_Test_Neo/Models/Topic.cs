@@ -11,7 +11,7 @@ namespace DataBase_Scema_Test_Neo.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public int SubjectWeight { get; set; }
-        public virtual ICollection<Question> Questions { get; set; }
+        public virtual ICollection<PullOfQuestionPerTopic> Questions { get; set; }
     }
 }
 // test Bella push

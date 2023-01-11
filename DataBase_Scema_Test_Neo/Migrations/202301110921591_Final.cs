@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initial6 : DbMigration
+    public partial class Final : DbMigration
     {
         public override void Up()
         {
@@ -34,6 +34,21 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Examinations",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        SelectedAnswer = c.Int(nullable: false),
+                        Candidate_Id = c.Int(),
+                        Certificate_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Candidates", t => t.Candidate_Id)
+                .ForeignKey("dbo.Certificates", t => t.Certificate_Id)
+                .Index(t => t.Candidate_Id)
+                .Index(t => t.Certificate_Id);
+            
+            CreateTable(
                 "dbo.Certificates",
                 c => new
                     {
@@ -57,22 +72,33 @@
                 .Index(t => t.Certificate_Id);
             
             CreateTable(
-                "dbo.Questions",
+                "dbo.PullOfQuestionPerTopics",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         TextOfQuestion = c.String(),
                         possibleAnswers_Id = c.Int(),
                         Topic_Id = c.Int(),
-                        Examination_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.PossibleAnswers", t => t.possibleAnswers_Id)
                 .ForeignKey("dbo.Topics", t => t.Topic_Id)
-                .ForeignKey("dbo.Examinations", t => t.Examination_Id)
                 .Index(t => t.possibleAnswers_Id)
-                .Index(t => t.Topic_Id)
-                .Index(t => t.Examination_Id);
+                .Index(t => t.Topic_Id);
+            
+            CreateTable(
+                "dbo.ExamQuestions",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        examination_Id = c.Int(),
+                        PullOfQuestionPerTopic_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Examinations", t => t.examination_Id)
+                .ForeignKey("dbo.PullOfQuestionPerTopics", t => t.PullOfQuestionPerTopic_Id)
+                .Index(t => t.examination_Id)
+                .Index(t => t.PullOfQuestionPerTopic_Id);
             
             CreateTable(
                 "dbo.PossibleAnswers",
@@ -86,42 +112,30 @@
                     })
                 .PrimaryKey(t => t.Id);
             
-            CreateTable(
-                "dbo.Examinations",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        MaxScore = c.Int(nullable: false),
-                        Candidate_Id = c.Int(),
-                        Certificate_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Candidates", t => t.Candidate_Id)
-                .ForeignKey("dbo.Certificates", t => t.Certificate_Id)
-                .Index(t => t.Candidate_Id)
-                .Index(t => t.Certificate_Id);
-            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Questions", "Examination_Id", "dbo.Examinations");
+            DropForeignKey("dbo.Topics", "Certificate_Id", "dbo.Certificates");
+            DropForeignKey("dbo.PullOfQuestionPerTopics", "Topic_Id", "dbo.Topics");
+            DropForeignKey("dbo.PullOfQuestionPerTopics", "possibleAnswers_Id", "dbo.PossibleAnswers");
+            DropForeignKey("dbo.ExamQuestions", "PullOfQuestionPerTopic_Id", "dbo.PullOfQuestionPerTopics");
+            DropForeignKey("dbo.ExamQuestions", "examination_Id", "dbo.Examinations");
             DropForeignKey("dbo.Examinations", "Certificate_Id", "dbo.Certificates");
             DropForeignKey("dbo.Examinations", "Candidate_Id", "dbo.Candidates");
-            DropForeignKey("dbo.Topics", "Certificate_Id", "dbo.Certificates");
-            DropForeignKey("dbo.Questions", "Topic_Id", "dbo.Topics");
-            DropForeignKey("dbo.Questions", "possibleAnswers_Id", "dbo.PossibleAnswers");
+            DropIndex("dbo.ExamQuestions", new[] { "PullOfQuestionPerTopic_Id" });
+            DropIndex("dbo.ExamQuestions", new[] { "examination_Id" });
+            DropIndex("dbo.PullOfQuestionPerTopics", new[] { "Topic_Id" });
+            DropIndex("dbo.PullOfQuestionPerTopics", new[] { "possibleAnswers_Id" });
+            DropIndex("dbo.Topics", new[] { "Certificate_Id" });
             DropIndex("dbo.Examinations", new[] { "Certificate_Id" });
             DropIndex("dbo.Examinations", new[] { "Candidate_Id" });
-            DropIndex("dbo.Questions", new[] { "Examination_Id" });
-            DropIndex("dbo.Questions", new[] { "Topic_Id" });
-            DropIndex("dbo.Questions", new[] { "possibleAnswers_Id" });
-            DropIndex("dbo.Topics", new[] { "Certificate_Id" });
-            DropTable("dbo.Examinations");
             DropTable("dbo.PossibleAnswers");
-            DropTable("dbo.Questions");
+            DropTable("dbo.ExamQuestions");
+            DropTable("dbo.PullOfQuestionPerTopics");
             DropTable("dbo.Topics");
             DropTable("dbo.Certificates");
+            DropTable("dbo.Examinations");
             DropTable("dbo.Candidates");
         }
     }
