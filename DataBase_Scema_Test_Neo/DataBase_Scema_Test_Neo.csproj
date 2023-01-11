@@ -132,9 +132,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202301110921591_Final.cs" />
-    <Compile Include="Migrations\202301110921591_Final.designer.cs">
-      <DependentUpon>202301110921591_Final.cs</DependentUpon>
+    <Compile Include="Migrations\202301111522454_Final.cs" />
+    <Compile Include="Migrations\202301111522454_Final.designer.cs">
+      <DependentUpon>202301111522454_Final.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Certificate.cs" />
@@ -142,7 +142,7 @@
     <Compile Include="Models\ExamQuestions.cs" />
     <Compile Include="Models\Examination.cs" />
     <Compile Include="Models\PossibleAnswers.cs" />
-    <Compile Include="Models\PullOfQuestionPerTopic.cs" />
+    <Compile Include="Models\PullOfQuestion.cs" />
     <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -200,8 +200,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202301110921591_Final.resx">
-      <DependentUpon>202301110921591_Final.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202301111522454_Final.resx">
+      <DependentUpon>202301111522454_Final.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

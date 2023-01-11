@@ -14,10 +14,10 @@ namespace DataBase_Scema_Test_Neo.Data
         }
         public  DbSet<Certificate> Certificate { get; set; }
         public  DbSet<Topic> Topics { get; set; }
-        public  DbSet<PullOfQuestionPerTopic> Questions { get; set; }
+        public  DbSet<PullOfQuestion> Questions { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
         public DbSet<Examination> Examinations { get; set; }
-        public DbSet<ExamQuestions> SelectedAnswers { get; set; }
+        public DbSet<ExamQuestions> ExamQuestions { get; set; }
     }
     //test
 }

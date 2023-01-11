@@ -10,7 +10,9 @@ namespace DataBase_Scema_Test_Neo.Models
     {
         public int Id { get; set; }
 
-        public int SelectedAnswer { get; set; }
+        public  ICollection<int> SelectedAnswers { get; set; }
+        public ExamQuestions ExamQuestions { get; set; }
+
 
     }
 }

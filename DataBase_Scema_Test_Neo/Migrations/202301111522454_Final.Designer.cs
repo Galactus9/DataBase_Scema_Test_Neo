@@ -13,7 +13,7 @@ namespace DataBase_Scema_Test_Neo.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202301110921591_Final"; }
+            get { return "202301111522454_Final"; }
         }
         
         string IMigrationMetadata.Source

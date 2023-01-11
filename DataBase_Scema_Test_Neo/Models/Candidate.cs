@@ -26,6 +26,6 @@ namespace DataBase_Scema_Test_Neo.Models
         public string Country { get; set; }
         public string LandlineNumber { get; set; }
         public string MobileNumber { get; set; }
-        public ICollection<Examination> examinations { get; set; }
+        public virtual ICollection<Examination> examinations { get; set; }
     }
 }
